@@ -1,7 +1,8 @@
 📚 Bookshop Dashboard – Power BI Project
 
 Este proyecto forma parte de mi portafolio de Power BI.
-Está basado en el esquema relacional Bookshop Database que previamente desarrollé en MySQL (ver aquí 👉 SQL Bookshop Project).
+Está basado en el esquema relacional Bookshop Database que previamente desarrollé en MySQL (ver aquí 👉 https://github.com/CamilaVHeuer/portfolio-database/tree/main/bookshop-project SQL Bookshop Project).
+Las visualizaciones estan vinculadas a las quieries del proyecto Bookshop buscando represantarlas de manera visual. 
 
 ## 🎯 Objetivos
 - Analizar las ventas de una librería ficticia en distintos períodos de tiempo.
@@ -36,28 +37,28 @@ Está basado en el esquema relacional Bookshop Database que previamente desarrol
 
 Se implementaron medidas y columnas calculadas en DAX para enriquecer el modelo:
 
-- **UnidadesVendidas** = `SUM(SalesDetails[Quantity])`  
-- **LibroMásVendido** = medida con `TOPN + SUMMARIZE` para devolver el título con mayor cantidad de ventas  
-- **Top Clientes Recurrentes** = `COUNT(Sales[sale_id])` + visual filtrado con TopN  
-- **Tabla Calendario** con columnas de Año, MesNum, MesNombre, AñoMes (usada para gráficos de ticket promedio mensual y comparaciones temporales)
+- **units_sold** = `SUM(sale_details[quantity])`  para unidades vendidas
+- **best_selling_book** = medida con `TOPN + SUMMARIZE` para devolver el título con mayor cantidad de ventas  
+- **quantity_purchases** = `COUNT(sales[sale_id])` + visual filtrado con TopN  para determinar el top 3 de clientes recurrentes
+- **calendar table** con columnas de Año, MesNum, MesNombre, AñoMes (usada para gráficos de ticket promedio mensual y comparaciones temporales)
 
   ---
 
 ## 🗂️ Dataset
 - **Origen**: base de datos *Bookshop* creada en MySQL.  
 - **Tablas utilizadas**:  
-  - `Books` (catálogo de libros: título, género, precio, stock, autor)  
-  - `Authors` (nombre, país de origen)  
-  - `Customers` (clientes)  
-  - `Sales` (ventas: fecha, modo, total)  
-  - `SalesDetails` (detalle de cada venta: libro, cantidad, precio unitario)  
+  - `books` (catálogo de libros: Book_id, author_id, title, gender, price, stock)  
+  - `authors` (author_id, author_name, country)  
+  - `customers` (customer_id, customer_name, email)  
+  - `sales` (sale_id, customer_id, date, mode, total)  
+  - `sale_details` (detalle de cada venta: detail_id, sale_id, book_id, quantity, unit_price)  
 
 ---
 
 ## 🛠️ Tecnologías usadas
 - **SQL (MySQL):** modelado y carga inicial de datos.  
 - **Power Query:** transformaciones básicas.  
-- **DAX:** medidas calculadas (ventas totales, ticket promedio, top clientes, etc.).  
+- **DAX:** medidas calculadas (units sold, best selling book,  top customers, etc.).  
 - **Power BI Desktop:** diseño del dashboard e interactividad.  
 
 ---
