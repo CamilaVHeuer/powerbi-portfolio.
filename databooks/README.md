@@ -65,4 +65,9 @@ DAX measures and calculated columns were implemented to enrich the model:
 
 ##  Author
 Camila Villalba Heuer
-cbvillalbaheuer@gmail.com
+
+## Contact
+
+- [LinkedIn](https://www.linkedin.com/in/camilavheuer)
+- Email: **cbvillalbaheuer@gmail.com**
+
