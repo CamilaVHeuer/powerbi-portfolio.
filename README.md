@@ -31,7 +31,8 @@ Each project is based on relational database schemas that I previously designed 
 │   ├── ecommerce-analytics.pbix
 │   └── images/
 │
-└── README.md                 # (this file – portfolio overview) ´´´
+└── README.md                 # (this file – portfolio overview)
+```
 
 ## 🚀 Included Projects 
 
