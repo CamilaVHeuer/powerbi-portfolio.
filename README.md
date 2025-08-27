@@ -31,9 +31,9 @@ Each project is based on relational database schemas that I previously designed 
 │   ├── ecommerce-analytics.pbix
 │   └── images/
 │
-└── README.md                 # (this file – portfolio overview) 
+└── README.md                 # (this file – portfolio overview) ```
 
-## 🚀 Included Projects
+## 🚀 Included Projects 
 
 **📚 Bookshop Dashboard**
 Sales analysis of a fictional bookstore: recurring customers, best-selling books, monthly revenue, and inventory control.
