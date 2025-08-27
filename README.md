@@ -14,7 +14,7 @@ Each project is based on relational database schemas that I previously designed 
 
 ## 📂 Repository Structure
 
-/powerbi-portfolio/
+```/powerbi-portfolio/
 │
 ├── bookshop-dashboard/       # Bookshop Dashboard (based on Bookshop DB)
 │   ├── README.md             # Project documentation
@@ -31,7 +31,7 @@ Each project is based on relational database schemas that I previously designed 
 │   ├── ecommerce-analytics.pbix
 │   └── images/
 │
-└── README.md                 # (this file – portfolio overview)
+└── README.md                 # (this file – portfolio overview) 
 
 ## 🚀 Included Projects
 
