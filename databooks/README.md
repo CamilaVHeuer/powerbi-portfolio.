@@ -63,7 +63,6 @@ DAX measures and calculated columns were implemented to enrich the model:
 
 📌 This project is part of my **Power BI portfolio** and is linked to my SQL **Bookshop Database project**.
 
-Author
+##  Author
 Camila Villalba Heuer
-LinkedIn 
 cbvillalbaheuer@gmail.com
