@@ -1,52 +1,50 @@
 📚 Bookshop Dashboard – Power BI Project
 
-Este proyecto forma parte de mi portafolio de Power BI.
-Está basado en el esquema relacional Bookshop Database que previamente desarrollé en MySQL (ver aquí 👉 https://github.com/CamilaVHeuer/portfolio-database/tree/main/bookshop-project SQL Bookshop Project).
-Las visualizaciones estan vinculadas a las quieries del proyecto Bookshop buscando represantarlas de manera visual. 
+This project is part of my Power BI portfolio. It is based on the Bookshop Database relational schema that I previously developed in MySQL (see here 👉 https://github.com/CamilaVHeuer/portfolio-database/tree/main/bookshop-project SQL Bookshop Project).
+The visualizations are connected to the Bookshop project queries, aiming to represent them in a visual way.
 
-## 🎯 Objetivos
-- Analizar las ventas de una librería ficticia en distintos períodos de tiempo.
-- Identificar a los **clientes recurrentes** y los que más gastaron.
-- Detectar los **libros más vendidos** y el comportamiento por autor y país de origen.
-- Evaluar la disponibilidad de inventario y libros con bajo stock.
-- Crear un tablero de **portada ejecutiva** con KPIs clave.
-
----
-
-## 📊 Métricas principales
-- **Ventas totales**: $552.950  
-- **Unidades vendidas**: 13  
-- **Ticket promedio mensual**: entre $30.000 y $50.000  
-- **Cliente con mayor gasto**: Emilia Diaz ($130.800)  
-- **Top 3 clientes recurrentes**: Camila Perez (3 compras), Emilia Diaz (2), Pablo Perez (2)  
-- **Libro más vendido**: *Origin* (5 unidades)  
-- **Top 3 libros más vendidos**: Origin, Angels and Demons, Nothing Lasts Forever  
+## 🎯 Objetives
+- Analyze the sales of a fictional bookstore across different time periods.
+- Identify **recurring customers** and the ones with the highest spending.
+- Detect the **best-selling books** and analyze behavior by author and country of origin.
+- Evaluate inventory availability and books with low stock.
+- Create an executive summary dashboard with key KPIs.
 
 ---
 
-## 📈 Visualizaciones
-- **Portada ejecutiva** con KPIs: ventas totales, unidades vendidas, libro más vendido, top 3 clientes recurrentes.  
-- **Inventario de libros**: listado general, libros con bajo stock, país de origen de autores, libro más caro y más barato.  
-- **Ventas y facturación**: tabla de ventas, ingresos mensuales, desglose por canal (tienda física vs web), ticket promedio.  
-- **Clientes**: clientes con más compras, clientes que más gastaron, ticket promedio mensual, clientes recurrentes.  
-- **Autores**: libros vendidos por autor y total de ventas por país de origen.  
+## 📊 Main Metrics
+- **Total sales**: $552.950  
+- **Units old**: 13  
+- **Average monthly ticket**: between $30.000 and $50.000  
+- **Top spending customer**: Emilia Diaz ($130.800)  
+- **Top 3 recurring customers**: Camila Perez (3 compras), Emilia Diaz (2), Pablo Perez (2)  
+- **Best-selling-book**: *Origin* (5 units)  
+- **Top 3 best-selling-books**: Origin, Angels and Demons, Nothing Lasts Forever 
 
 ---
 
-## 📐 Medidas y cálculos DAX
+## 📈 Visualizations
+- **Executive summary** with KPIs: total sales, units sold, best-selling book, top 3 recurring customers. 
+- **Book inventory**: general listing, low-stock books, authors’ country of origin, most expensive and cheapest book.
+- **Sales and revenue**: sales table, monthly revenue, breakdown by channel (physical store vs. web), average ticket.  
+- **Customers**: top customers by number of purchases, top spenders, average monthly ticket, recurring customers.
+- **Authors**: books sold per author and total sales by country of origin.
 
-Se implementaron medidas y columnas calculadas en DAX para enriquecer el modelo:
+---
 
-- **units_sold** = `SUM(sale_details[quantity])`  para unidades vendidas
-- **best_selling_book** = medida con `TOPN + SUMMARIZE` para devolver el título con mayor cantidad de ventas  
-- **quantity_purchases** = `COUNT(sales[sale_id])` + visual filtrado con TopN  para determinar el top 3 de clientes recurrentes
-- **calendar table** con columnas de Año, MesNum, MesNombre, AñoMes (usada para gráficos de ticket promedio mensual y comparaciones temporales)
+## 📐 DAX Measures and Calculations
 
+DAX measures and calculated columns were implemented to enrich the model:
+- **units_sold** = SUM(sale_details[quantity]) → total units sold
+- **best_selling_book** → measure using TOPN + SUMMARIZE to return the title with the highest sales
+- **quantity_purchases** = COUNT(sales[sale_id]) + TopN filtered visual to determine the top 3 recurring customers
+- **calendar table** with columns for Year, MonthNum, MonthName, YearMonth (used for monthly ticket visuals and time comparisons)
+  
   ---
 
 ## 🗂️ Dataset
-- **Origen**: base de datos *Bookshop* creada en MySQL.  
-- **Tablas utilizadas**:  
+- **Source**: *Bookshop* database created en MySQL.  
+- **Tables used**:  
   - `books` (catálogo de libros: Book_id, author_id, title, gender, price, stock)  
   - `authors` (author_id, author_name, country)  
   - `customers` (customer_id, customer_name, email)  
@@ -55,12 +53,17 @@ Se implementaron medidas y columnas calculadas en DAX para enriquecer el modelo:
 
 ---
 
-## 🛠️ Tecnologías usadas
-- **SQL (MySQL):** modelado y carga inicial de datos.  
-- **Power Query:** transformaciones básicas.  
-- **DAX:** medidas calculadas (units sold, best selling book,  top customers, etc.).  
-- **Power BI Desktop:** diseño del dashboard e interactividad.  
+## 🛠️ Technologies Used
+- **SQL (MySQL):** data modeling and initial load. 
+- **Power Query:** basic transformations. 
+- **DAX:** calculated measures (units sold, best-selling book, top customers, etc.).
+- **Power BI Desktop:** dashboard design and interactivity 
 
 ---
 
-📌 Este proyecto forma parte de mi portafolio de **Power BI**, y está vinculado con mi proyecto de **SQL Bookshop Database**.
+📌 This project is part of my **Power BI portfolio** and is linked to my SQL **Bookshop Database project**.
+
+Author
+Camila Villalba Heuer
+LinkedIn 
+cbvillalbaheuer@gmail.com
