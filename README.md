@@ -19,7 +19,7 @@ Each project is based on relational database schemas that I previously designed 
 ├── bookshop-dashboard/       # Bookshop Dashboard (based on Bookshop DB)
 │   ├── README.md             # Project documentation
 │   ├── bookshop-dashboard.pbix
-│   └── images/               # Screenshots of the dashboard
+│   └── images/               # In progress - Screenshots of the dashboard
 │
 ├── clinical-scheduler/       # In progress – Clinical Scheduler Dashboard
 │   ├── README.md
